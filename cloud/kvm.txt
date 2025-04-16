@@ -1,0 +1,18 @@
+>VirtualBox
+>VBoxManage modifyvm "ubu" --nested-hm-virt on
+
+Sudo apt-get update
+
+egrep -c ‘(vmx|svm)’ /proc/cpuinfo
+
+kvm-ok
+
+Sudo apt install -y cpu-checker
+
+sudo apt-get install -y qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
+
+sudo systemctl enable –now libvirtd
+
+sudo systemctl start libvirtd
+
+sudo systemctl status linvirtd 
